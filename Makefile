@@ -1,6 +1,6 @@
 DOCKER_HOST   := docker.io
 DOCKER_ID_USER := lchenn
-ARTIFACT := python-grpc-nlp
+ARTIFACT := python3-grpc-nlp
 
 FULL_NAME   := ${DOCKER_HOST}/${DOCKER_ID_USER}/${ARTIFACT}
 GIT_HASH    := $$(git log -1 --pretty=%h)

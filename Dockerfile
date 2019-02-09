@@ -1,9 +1,8 @@
-FROM python:3.6
+FROM python:3.6.8-slim
 
-RUN mkdir -p /opt/temp
-WORKDIR /opt/app/temp
+COPY requirements.txt /tmp/
 
-COPY requirements.txt .
-
-RUN pip install --no-cache-dir -r requirements.txt \
-    && rm -rf /opt/app/temp
+RUN cd /tmp/ \
+	&& pip install --upgrade pip \
+	&& pip install --no-cache-dir -r requirements.txt \
+    && rm -rf /tmp/requirements.txt

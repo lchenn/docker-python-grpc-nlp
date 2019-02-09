@@ -15,7 +15,6 @@ build:
 	@docker tag $(ARTIFACT):${GIT_HASH} ${FULL_NAME}:${VERSION}
 
 push: login
-	@docker push ${FULL_NAME}:${GIT_HASH}
 	@docker push ${FULL_NAME}:${LATEST}
 	@docker push ${FULL_NAME}:${VERSION}
 
